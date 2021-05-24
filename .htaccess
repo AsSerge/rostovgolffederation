@@ -1,0 +1,21 @@
+<IfModule mod_rewrite.c>
+Options -Indexes
+Options +FollowSymLinks
+RewriteEngine On
+
+# Главная
+
+RewriteRule ^(.*)\.html $1.php
+
+# RewriteRule ^([A-Za-z1-2]+)$ index.php?id=$1 [L]
+# RewriteRule ^([A-Za-z\-]+)/([A-Za-z\-]+)/([A-Za-z\-]+)$ $1/$2/$3.php [L]
+# RewriteRule ^([A-Za-z\-]+)/([A-Za-z\-]+)/([A-Za-z\-]+)-([0-9]+).html$ $1/$2/$3.php?event_id=$4 [L]
+
+#RewriteRule ^([A-Za-z1-9]+)$ news.php?event_id=$1 [L]
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteCond %{REQUEST_FILENAME}\.php -f
+#RewriteRule ^(.*)$ $1.php
+
+</IfModule>
+
+# ErrorDocument 404 http://rostovgolffederation/404.php
